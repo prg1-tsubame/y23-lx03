@@ -94,6 +94,13 @@ def 困った状況4a_データが空() = {
 
   test(空リストに先頭の要素はない)    // MatchError: List()
   test(空リストに残りのリストはない)  // MatchError: List()
+
+  import scala.util.Random
+  import scala.collection.Set
+  import scala.math.max
+
+  test(() => { Random.between(3, 5); () })
+  test(() => { Random.between(5, 3); () })  // IllegalArgumentException:  requirement failed:  Invalid bounds
 }
 
 @main
